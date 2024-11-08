@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Len Việt Nam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .header .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .nav {
+            flex-grow: 1;
+            margin: 0 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        
+        .nav a:hover {
+            background-color: #ddd;
+        }
+        
+        .search-cart {
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-box {
+            position: relative;
+            margin-right: 20px;
+        }
+        
+        .search-box input[type="text"] {
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .search-box button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .icon {
+            margin-left: 20px;
+        }
+
+        .icon a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .icon a:hover {
+            color: #4CAF50;
+        }
+
+        .main-nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .main-nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .main-nav a:hover {
+            background-color: #575757;
+        }
+
+        .main-nav a.active {
+            background-color: #4CAF50;
+        }
+
+        .breadcrumb {
+            background-color: #eee;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .breadcrumb a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 30%;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .product h2 {
+            font-size: 1.5em;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product p {
+            color: #777;
+            font-size: 1em;
+            margin: 5px 0;
+        }
+
+        .product p.price {
+            color: #4CAF50;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .news {
+            padding: 20px;
+        }
+
+        .news .news-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .news .news-item h2 {
+            font-size: 1.5em;
+            color: #333;
+            margin: 0 0 10px;
+        }
+
+        .news .news-item p {
+            color: #777;
+            font-size: 1em;
+            margin: 5px 0 10px;
+        }
+
+        .news .news-item a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .news .news-item a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer div {
+            margin: 10px;
+        }
+
+        .footer h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+        }
+
+        .social-icons a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="duong-dan-den-logo-cua-ban.png" alt="Logo">
+            </div>
+            <div class="nav">
+                <a href="#home">Trang chủ</a>
+                <a href="#products">Sản phẩm</a>
+                <a href="#about">Giới thiệu</a>
+                <a href="#contact">Liên hệ</a>
+            </div>
+            <div class="search-cart">
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm...">
+                    <button type="button">Tìm kiếm</button>
+                </div>
+                <div class="icon">
+                    <a href="#cart">🛒 Giỏ hàng</a>
+                    <a href="#login">🔒 Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="duong-dan-den-banner-cua-ban.jpg" alt="Banner">
+    </div>
+
+    <!-- Thanh điều hướng chính -->
+    <div class="main-nav">
+        <a class="active" href="#home">Trang chủ</a>
+        <a href="#categories">Danh mục sản phẩm</a>
+        <a href="#news">Tin tức</a>
+        <a href="#blog">Blog</a>
+    </div>
+
+    <!-- Thanh điều hướng phân cấp -->
+    <div class="breadcrumb">
+        <a href="#home">Trang chủ</a> &gt;
+        <a href="#categories">Danh mục sản phẩm</a>
+    </div>
+
+    <!-- Phần danh mục sản phẩm -->
+    <div class="products">
+        <div class="product">
+            <img src="duong-dan-den-hinh-anh-san-pham-1.jpg" alt="Sản phẩm 1">
+            <h2>Sản phẩm 1</h2>
+            <p class="price">100,000 VND</p>
+        </div>
+        <div class="product">
+            <img src="duong-dan-den-hinh-anh-san-pham-2.jpg" alt="Sản phẩm 2">
+            <h2>Sản phẩm 2</h2>
+            <p class="price">200,000 VND</p>
+        </div>
+        <div class="product">
+            <img src="duong-dan-den-hinh-anh-san-pham-3.jpg" alt="Sản phẩm 3">
+            <h2>Sản phẩm 3</h2>
+            <p class="price">300,000 VND</p>
+        </div>
+    </div>
+
+    <!-- Phần tin tức -->
+    <div class="breadcrumb">
+        <a href="#home">Trang chủ</a> &gt;
+        <a href="#news">Tin tức</a>
+    </div>
+    <div class="news">
+        <div class="news-item">
+            <h2>Khuyến mãi mùa đông tại cửa hàng</h2>
+            <p>Nhân dịp mùa đông, cửa hàng len của chúng tôi đang có chương[_{{{CITATION{{{_1{](https://github.com/higithub97/OMG-Web/tree/340263c83461750ab627d955969b96d400b0213e/DOMjs%2FDOMevent.md)</p>
+    </div>
+</div>
+<!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div>
+                <h3>Thông tin doanh nghiệp</h3>
+                <p>Công ty TNHH Len Việt Nam</p>
+                <p>Địa chỉ: 123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh</p>
+                <p>Email: lienhe@lenvietnam.com</p>
+                <p>Điện thoại: 0123 456 789</p>
+            </div>
+            <div>
+                <h3>Mạng xã hội</h3>
+                <div class="social-icons">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+            <div>
+                <h3>Bản đồ</h3>
+                <p><a href="link-den-ban-do-cua-ban" target="_blank">Xem bản đồ</a></p>
+            </div>
+            <div>
+                <h3>Thông tin liên hệ</h3>
+                <p>Email: lienhe@lenvietnam.com</p>
+                <p>Điện thoại: 0123 456 789</p>
+            </div>
+        </div>
+        <p>&copy; 2023 Cửa Hàng Len Việt Nam</p>
+    </div>
+</body>
+</html> 
